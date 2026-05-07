@@ -1,0 +1,40 @@
+.projects h2 {
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #424245;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.featured {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.featured > * {
+  grid-column: 1 / -1;
+}
+
+.featured > *:nth-child(n + 2) {
+  grid-column: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .featured {
+    gap: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
