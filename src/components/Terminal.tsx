@@ -126,28 +126,28 @@ export function Terminal() {
         if (isSynth) toggleSynth()
         if (isBarbie) toggleBarbie()
         if (isObi) toggleObi()
-        output = ['✨ Switched to light theme']
+        output = ['Switched to light theme']
       } else if (themeArg === '2' || themeArg === 'dark') {
         setTheme('dark')
         if (isSynth) toggleSynth()
         if (isBarbie) toggleBarbie()
         if (isObi) toggleObi()
-        output = ['✨ Switched to dark theme']
+        output = ['Switched to dark theme']
       } else if (themeArg === '3' || themeArg === 'synth') {
         if (isBarbie) toggleBarbie()
         if (isObi) toggleObi()
         toggleSynth()
-        output = ['✨ Switched to synthwave theme']
+        output = ['Switched to synthwave theme']
       } else if (themeArg === '4' || themeArg === 'barbie') {
         if (isSynth) toggleSynth()
         if (isObi) toggleObi()
         toggleBarbie()
-        output = ['✨ Switched to Barbie mode 💖']
+        output = ['Switched to Barbie mode 💖']
       } else if (themeArg === '5' || themeArg === 'obi') {
         if (isSynth) toggleSynth()
         if (isBarbie) toggleBarbie()
         toggleObi()
-        output = ['✨ Switched to Obi-Wan theme ⚔️']
+        output = ['Switched to Obi-Wan theme ⚔️']
       } else {
         output = ['✗ Unknown theme. Type "themes" for options']
       }
