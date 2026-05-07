@@ -82,8 +82,12 @@ export const translations = {
       contact: 'Contact'
     },
     hero: {
+      headline: 'Logic is beautiful. Building robust backends with .NET and Azure.',
       cta: 'Get in Touch',
-      github: 'GitHub →'
+      github: 'GitHub →',
+      yearsExp: 'Years Experience',
+      projectsBuilt: 'Projects Built',
+      uptime: 'Uptime Average'
     },
     about: {
       title: 'About Me',

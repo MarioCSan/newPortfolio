@@ -1,5 +1,6 @@
 import { HelmetProvider } from 'react-helmet-async'
 import { AppProvider } from './context/AppContext'
+import { SynthProvider } from './context/SynthContext'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { AboutSection } from './components/AboutSection'
@@ -9,7 +10,9 @@ import { SkillsSection } from './components/SkillsSection'
 import { CertificatesSection } from './components/CertificatesSection'
 import { ExperienceSection } from './components/ExperienceSection'
 import { Footer } from './components/Footer'
+import { Terminal } from './components/Terminal'
 import './styles/globals.css'
+import './styles/synth.css'
 
 function AppContent() {
   return (
@@ -25,6 +28,7 @@ function AppContent() {
         <ExperienceSection />
       </main>
       <Footer />
+      <Terminal />
     </div>
   )
 }
@@ -32,9 +36,11 @@ function AppContent() {
 function App() {
   return (
     <HelmetProvider>
-      <AppProvider>
-        <AppContent />
-      </AppProvider>
+      <SynthProvider>
+        <AppProvider>
+          <AppContent />
+        </AppProvider>
+      </SynthProvider>
     </HelmetProvider>
   )
 }
