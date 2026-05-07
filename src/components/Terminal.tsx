@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import { useSynth } from '../context/SynthContext'
+import { useBarbie } from '../context/BarbieContext'
+import { useObi } from '../context/ObiContext'
+import { useAppContext } from '../context/AppContext'
+import { terminalCommands } from '../data/terminalCommands'
 import styles from './Terminal.module.css'
 
 interface Command {
@@ -16,62 +20,11 @@ export function Terminal() {
   const [historyIndex, setHistoryIndex] = useState(-1)
   const inputRef = useRef<HTMLInputElement>(null)
   const outputRef = useRef<HTMLDivElement>(null)
+  const { language, setTheme } = useAppContext()
   const { isSynth, toggleSynth } = useSynth()
-
-  const commandHelp: { [key: string]: string[] } = {
-    help: [
-      '> Available commands:',
-      '  about    - Learn about Mario',
-      '  skills   - Technical skills',
-      '  projects - Featured projects',
-      '  contact  - Contact information',
-      '  synth    - Toggle synthwave mode ✨',
-      '  base     - Return to base theme',
-      '  clear    - Clear terminal',
-      '  ls       - List commands',
-      '  whoami   - Current user',
-    ],
-    about: [
-      '> Mario Canales Sánchez',
-      '> Backend Engineer & Cloud Architect',
-      '> Building robust, scalable systems with .NET and Azure',
-      '> 10+ years of experience',
-      '> Logic is beautiful ✨',
-    ],
-    skills: [
-      '> Backend & Cloud: .NET 8/9, C#, Azure Services, Docker, Kubernetes',
-      '> Databases: SQL Server, PostgreSQL, CosmosDB, Redis',
-      '> Frontend: React, TypeScript, Next.js, Tailwind CSS',
-      '> DevOps: CI/CD, GitHub Actions, Terraform, Azure DevOps',
-    ],
-    projects: [
-      '> Distributed Cache Layer - 50K req/s throughput',
-      '> Real-Time Payment Processor - 2M daily transactions',
-      '> Analytics Platform - 1B+ events daily',
-      '> Service-Mesh API Gateway - 50K concurrent connections',
-    ],
-    contact: [
-      '> Email: canalessanchezmario@gmail.com',
-      '> GitHub: github.com/mariocdev',
-      '> LinkedIn: linkedin.com/in/mario-canales',
-    ],
-    ls: [
-      'about',
-      'skills',
-      'projects',
-      'contact',
-      'synth',
-      'base',
-      'help',
-      'clear',
-      'whoami',
-    ],
-    whoami: [
-      '$ whoami',
-      'mario@portfolio:~$',
-    ],
-    clear: [],
-  }
+  const { isBarbie, toggleBarbie } = useBarbie()
+  const { isObi, toggleObi } = useObi()
+  const terminalCmds = terminalCommands[language]
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -118,14 +71,16 @@ export function Terminal() {
 
   const executeCommand = (cmd: string) => {
     const trimmedCmd = cmd.trim().toLowerCase()
+    const args = trimmedCmd.split(' ')
+    const baseCmd = args[0]
 
-    if (trimmedCmd === 'clear') {
+    if (baseCmd === 'clear') {
       setCommands([])
       setInput('')
       return
     }
 
-    if (trimmedCmd === 'synth') {
+    if (baseCmd === 'synth' || baseCmd === 'neon') {
       toggleSynth()
       const output = isSynth
         ? ['✨ Synthwave mode deactivated ✨']
@@ -142,7 +97,7 @@ export function Terminal() {
       return
     }
 
-    if (trimmedCmd === 'base') {
+    if (baseCmd === 'base') {
       if (isSynth) {
         toggleSynth()
       }
@@ -159,9 +114,58 @@ export function Terminal() {
       return
     }
 
-    const output = commandHelp[trimmedCmd] || [
-      `$ command not found: ${trimmedCmd}`,
-      '> type "help" for available commands',
+    if (baseCmd === 'themes') {
+      const themeArg = args[1]?.toLowerCase()
+      let output: string[] = []
+
+      if (!themeArg) {
+        output = terminalCmds.themes || []
+      } else if (themeArg === '1' || themeArg === 'light') {
+        setTheme('light')
+        if (isSynth) toggleSynth()
+        if (isBarbie) toggleBarbie()
+        if (isObi) toggleObi()
+        output = ['✨ Switched to light theme']
+      } else if (themeArg === '2' || themeArg === 'dark') {
+        setTheme('dark')
+        if (isSynth) toggleSynth()
+        if (isBarbie) toggleBarbie()
+        if (isObi) toggleObi()
+        output = ['✨ Switched to dark theme']
+      } else if (themeArg === '3' || themeArg === 'synth') {
+        if (isBarbie) toggleBarbie()
+        if (isObi) toggleObi()
+        toggleSynth()
+        output = ['✨ Switched to synthwave theme']
+      } else if (themeArg === '4' || themeArg === 'barbie') {
+        if (isSynth) toggleSynth()
+        if (isObi) toggleObi()
+        toggleBarbie()
+        output = ['✨ Switched to Barbie mode 💖']
+      } else if (themeArg === '5' || themeArg === 'obi') {
+        if (isSynth) toggleSynth()
+        if (isBarbie) toggleBarbie()
+        toggleObi()
+        output = ['✨ Switched to Obi-Wan theme ⚔️']
+      } else {
+        output = ['✗ Unknown theme. Type "themes" for options']
+      }
+
+      const newCommand: Command = {
+        input: cmd,
+        output,
+        displayOutput: [],
+      }
+      setCommands([...commands, newCommand])
+      setHistory([...history, cmd])
+      setHistoryIndex(-1)
+      setInput('')
+      return
+    }
+
+    const output = (terminalCmds as unknown as Record<string, string[]>)[baseCmd] || [
+      `$ command not found: ${baseCmd}`,
+      `> type "help" for available commands`,
     ]
 
     const newCommand: Command = {

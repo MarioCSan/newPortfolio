@@ -1,0 +1,412 @@
+/* Synthwave Theme */
+html[data-synth="true"] {
+  --primary: #ff10f0;
+  --primary-dark: #dd00dd;
+  --primary-light: #ff55ff;
+  --accent-gold: #00f5ff;
+  --space-dark: #0a0e27;
+
+  /* Light theme (not used in synth, but keep for consistency) */
+  --bg-primary: #0a0e27;
+  --bg-secondary: #1a1033;
+  --bg-tertiary: #2a1a4a;
+  --text-primary: #00f5ff;
+  --text-secondary: #ff10f0;
+  --text-tertiary: #ffaa00;
+  --border: #ff10f0;
+}
+
+html[data-synth="true"][data-theme="dark"] {
+  --bg-primary: #0a0e27;
+  --bg-secondary: #1a1033;
+  --bg-tertiary: #2a1a4a;
+  --text-primary: #00f5ff;
+  --text-secondary: #ff10f0;
+  --text-tertiary: #ffaa00;
+  --border: #ff10f0;
+}
+
+/* Synthwave Effects */
+html[data-synth="true"] body {
+  background-color: #0a0e27;
+  color: #00f5ff;
+}
+
+html[data-synth="true"] h1,
+html[data-synth="true"] h2,
+html[data-synth="true"] h3,
+html[data-synth="true"] h4,
+html[data-synth="true"] h5,
+html[data-synth="true"] h6 {
+  text-shadow: 0 0 20px rgba(255, 16, 240, 0.5), 0 0 40px rgba(0, 245, 255, 0.3);
+  color: #ff10f0;
+}
+
+html[data-synth="true"] .btn {
+  background-color: #ff10f0;
+  color: #0a0e27;
+  box-shadow: 0 0 20px rgba(255, 16, 240, 0.5), inset 0 0 10px rgba(255, 16, 240, 0.2);
+  text-shadow: 0 0 10px rgba(255, 16, 240, 0.5);
+}
+
+html[data-synth="true"] .btn:hover {
+  background-color: #ff55ff;
+  box-shadow: 0 0 30px rgba(255, 16, 240, 0.8), inset 0 0 20px rgba(255, 16, 240, 0.3);
+}
+
+html[data-synth="true"] .btn.secondary {
+  background-color: transparent;
+  color: #00f5ff;
+  border: 2px solid #00f5ff;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.4), inset 0 0 10px rgba(0, 245, 255, 0.1);
+}
+
+html[data-synth="true"] .btn.secondary:hover {
+  background-color: rgba(0, 245, 255, 0.1);
+  border-color: #ff10f0;
+  color: #ff10f0;
+  box-shadow: 0 0 25px rgba(255, 16, 240, 0.6);
+}
+
+html[data-synth="true"] .tag {
+  background-color: rgba(255, 16, 240, 0.2);
+  color: #ff10f0;
+  border: 1px solid #ff10f0;
+  box-shadow: 0 0 10px rgba(255, 16, 240, 0.3);
+}
+
+html[data-synth="true"] .tag.primary {
+  background-color: #ff10f0;
+  color: #0a0e27;
+  box-shadow: 0 0 15px rgba(255, 16, 240, 0.6);
+}
+
+html[data-synth="true"] .card {
+  background-color: rgba(26, 16, 51, 0.8);
+  border: 2px solid #ff10f0;
+  box-shadow: 0 0 20px rgba(255, 16, 240, 0.3), inset 0 0 20px rgba(255, 16, 240, 0.05);
+}
+
+html[data-synth="true"] .card:hover {
+  border-color: #00f5ff;
+  box-shadow: 0 0 30px rgba(255, 16, 240, 0.5), 0 0 40px rgba(0, 245, 255, 0.3), inset 0 0 20px rgba(255, 16, 240, 0.1);
+  transform: translateY(-4px);
+}
+
+html[data-synth="true"] a {
+  color: #00f5ff;
+  text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+}
+
+html[data-synth="true"] a:hover {
+  color: #ff10f0;
+  text-shadow: 0 0 15px rgba(255, 16, 240, 0.6);
+}
+
+html[data-synth="true"] section {
+  background-color: #0a0e27;
+  border-bottom-color: #ff10f0;
+}
+
+html[data-synth="true"] .header {
+  background-color: rgba(10, 14, 39, 0.98);
+  border-bottom: 2px solid #ff10f0;
+  box-shadow: 0 0 20px rgba(255, 16, 240, 0.3);
+}
+
+html[data-synth="true"] .footer {
+  background: linear-gradient(180deg, #0a0e27 0%, #1a1033 50%, #0a0e27 100%);
+  border-top: 2px solid #ff10f0;
+  box-shadow: 0 -10px 40px rgba(255, 16, 240, 0.2);
+}
+
+html[data-synth="true"] .nav-link {
+  color: #00f5ff;
+}
+
+html[data-synth="true"] .nav-link:hover {
+  color: #ff10f0;
+  text-shadow: 0 0 10px rgba(255, 16, 240, 0.5);
+}
+
+/* Grid lines effect (optional) */
+html[data-synth="true"]::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(255, 16, 240, 0.05) 25%, rgba(255, 16, 240, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 16, 240, 0.05) 75%, rgba(255, 16, 240, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(255, 16, 240, 0.05) 25%, rgba(255, 16, 240, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 16, 240, 0.05) 75%, rgba(255, 16, 240, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Barbie Theme - Improved Legibility */
+html[data-barbie="true"] {
+  --primary: #E91E63;
+  --primary-dark: #C2185B;
+  --primary-light: #F06292;
+  --accent-gold: #FF1493;
+  --space-dark: #FCE4EC;
+
+  --bg-primary: #FCE4EC;
+  --bg-secondary: #F8BBD0;
+  --bg-tertiary: #F48FB1;
+  --text-primary: #880E4F;
+  --text-secondary: #C2185B;
+  --text-tertiary: #E91E63;
+  --border: #E91E63;
+}
+
+html[data-barbie="true"] body {
+  background-color: #FCE4EC;
+  color: #880E4F;
+}
+
+html[data-barbie="true"] h1,
+html[data-barbie="true"] h2,
+html[data-barbie="true"] h3,
+html[data-barbie="true"] h4,
+html[data-barbie="true"] h5,
+html[data-barbie="true"] h6 {
+  text-shadow: 0 0 10px rgba(233, 30, 99, 0.2);
+  color: #C2185B;
+}
+
+html[data-barbie="true"] .btn {
+  background-color: #E91E63;
+  color: #FFFFFF;
+  box-shadow: 0 0 15px rgba(233, 30, 99, 0.3), inset 0 0 10px rgba(233, 30, 99, 0.2);
+}
+
+html[data-barbie="true"] .btn:hover {
+  background-color: #C2185B;
+  box-shadow: 0 0 25px rgba(233, 30, 99, 0.5), inset 0 0 15px rgba(233, 30, 99, 0.3);
+}
+
+html[data-barbie="true"] .btn.secondary {
+  background-color: transparent;
+  color: #E91E63;
+  border: 2px solid #E91E63;
+  box-shadow: 0 0 10px rgba(233, 30, 99, 0.2), inset 0 0 8px rgba(233, 30, 99, 0.1);
+}
+
+html[data-barbie="true"] .btn.secondary:hover {
+  background-color: rgba(233, 30, 99, 0.08);
+  border-color: #C2185B;
+  color: #C2185B;
+  box-shadow: 0 0 20px rgba(194, 24, 91, 0.4);
+}
+
+html[data-barbie="true"] .tag {
+  background-color: rgba(233, 30, 99, 0.15);
+  color: #880E4F;
+  border: 1px solid #E91E63;
+  box-shadow: 0 0 8px rgba(233, 30, 99, 0.15);
+}
+
+html[data-barbie="true"] .tag.primary {
+  background-color: #E91E63;
+  color: #FFFFFF;
+  box-shadow: 0 0 12px rgba(233, 30, 99, 0.4);
+}
+
+html[data-barbie="true"] .card {
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 2px solid #E91E63;
+  box-shadow: 0 0 15px rgba(233, 30, 99, 0.15), inset 0 0 20px rgba(233, 30, 99, 0.02);
+}
+
+html[data-barbie="true"] .card:hover {
+  border-color: #C2185B;
+  box-shadow: 0 0 25px rgba(233, 30, 99, 0.3), inset 0 0 20px rgba(233, 30, 99, 0.05);
+  transform: translateY(-4px);
+}
+
+html[data-barbie="true"] a {
+  color: #E91E63;
+}
+
+html[data-barbie="true"] a:hover {
+  color: #C2185B;
+}
+
+html[data-barbie="true"] section {
+  background-color: #FCE4EC;
+  border-bottom-color: #E91E63;
+}
+
+html[data-barbie="true"] .header {
+  background-color: rgba(252, 228, 236, 0.98);
+  border-bottom: 2px solid #E91E63;
+  box-shadow: 0 0 15px rgba(233, 30, 99, 0.15);
+}
+
+html[data-barbie="true"] .footer {
+  background: linear-gradient(180deg, #FCE4EC 0%, #F8BBD0 50%, #FCE4EC 100%);
+  border-top: 2px solid #E91E63;
+  box-shadow: 0 -10px 30px rgba(233, 30, 99, 0.1);
+}
+
+html[data-barbie="true"] .nav-link {
+  color: #880E4F;
+}
+
+html[data-barbie="true"] .nav-link:hover {
+  color: #E91E63;
+}
+
+/* Barbie grid lines effect */
+html[data-barbie="true"]::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(233, 30, 99, 0.02) 25%, rgba(233, 30, 99, 0.02) 26%, transparent 27%, transparent 74%, rgba(233, 30, 99, 0.02) 75%, rgba(233, 30, 99, 0.02) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(233, 30, 99, 0.02) 25%, rgba(233, 30, 99, 0.02) 26%, transparent 27%, transparent 74%, rgba(233, 30, 99, 0.02) 75%, rgba(233, 30, 99, 0.02) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Obi-Wan Kenobi (Star Wars) Theme */
+html[data-obi="true"] {
+  --primary: #0077BE;
+  --primary-dark: #005A99;
+  --primary-light: #1FA3D1;
+  --accent-gold: #D4AF37;
+  --space-dark: #0F1419;
+
+  --bg-primary: #0F1419;
+  --bg-secondary: #1A2332;
+  --bg-tertiary: #2A3F5F;
+  --text-primary: #E8D7C3;
+  --text-secondary: #0077BE;
+  --text-tertiary: #D4AF37;
+  --border: #0077BE;
+}
+
+html[data-obi="true"] body {
+  background-color: #0F1419;
+  color: #E8D7C3;
+}
+
+html[data-obi="true"] h1,
+html[data-obi="true"] h2,
+html[data-obi="true"] h3,
+html[data-obi="true"] h4,
+html[data-obi="true"] h5,
+html[data-obi="true"] h6 {
+  text-shadow: 0 0 15px rgba(0, 119, 190, 0.3), 0 0 30px rgba(212, 175, 55, 0.15);
+  color: #1FA3D1;
+}
+
+html[data-obi="true"] .btn {
+  background-color: #0077BE;
+  color: #E8D7C3;
+  box-shadow: 0 0 20px rgba(0, 119, 190, 0.4), inset 0 0 10px rgba(0, 119, 190, 0.2);
+  text-shadow: 0 0 8px rgba(0, 119, 190, 0.3);
+}
+
+html[data-obi="true"] .btn:hover {
+  background-color: #005A99;
+  box-shadow: 0 0 30px rgba(0, 119, 190, 0.6), inset 0 0 20px rgba(0, 119, 190, 0.3);
+}
+
+html[data-obi="true"] .btn.secondary {
+  background-color: transparent;
+  color: #1FA3D1;
+  border: 2px solid #1FA3D1;
+  box-shadow: 0 0 15px rgba(31, 163, 209, 0.3), inset 0 0 10px rgba(31, 163, 209, 0.1);
+}
+
+html[data-obi="true"] .btn.secondary:hover {
+  background-color: rgba(31, 163, 209, 0.1);
+  border-color: #D4AF37;
+  color: #D4AF37;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+}
+
+html[data-obi="true"] .tag {
+  background-color: rgba(0, 119, 190, 0.2);
+  color: #1FA3D1;
+  border: 1px solid #1FA3D1;
+  box-shadow: 0 0 10px rgba(0, 119, 190, 0.2);
+}
+
+html[data-obi="true"] .tag.primary {
+  background-color: #0077BE;
+  color: #E8D7C3;
+  box-shadow: 0 0 15px rgba(0, 119, 190, 0.6);
+}
+
+html[data-obi="true"] .card {
+  background-color: rgba(26, 35, 50, 0.9);
+  border: 2px solid #1FA3D1;
+  box-shadow: 0 0 20px rgba(31, 163, 209, 0.2), inset 0 0 20px rgba(31, 163, 209, 0.03);
+}
+
+html[data-obi="true"] .card:hover {
+  border-color: #D4AF37;
+  box-shadow: 0 0 30px rgba(31, 163, 209, 0.4), 0 0 40px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(31, 163, 209, 0.08);
+  transform: translateY(-4px);
+}
+
+html[data-obi="true"] a {
+  color: #1FA3D1;
+  text-shadow: 0 0 10px rgba(31, 163, 209, 0.3);
+}
+
+html[data-obi="true"] a:hover {
+  color: #D4AF37;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+html[data-obi="true"] section {
+  background-color: #0F1419;
+  border-bottom-color: #0077BE;
+}
+
+html[data-obi="true"] .header {
+  background-color: rgba(15, 20, 25, 0.98);
+  border-bottom: 2px solid #0077BE;
+  box-shadow: 0 0 20px rgba(0, 119, 190, 0.2);
+}
+
+html[data-obi="true"] .footer {
+  background: linear-gradient(180deg, #0F1419 0%, #1A2332 50%, #0F1419 100%);
+  border-top: 2px solid #0077BE;
+  box-shadow: 0 -10px 40px rgba(0, 119, 190, 0.15);
+}
+
+html[data-obi="true"] .nav-link {
+  color: #E8D7C3;
+}
+
+html[data-obi="true"] .nav-link:hover {
+  color: #D4AF37;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* Obi-Wan grid lines effect */
+html[data-obi="true"]::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(0, 119, 190, 0.04) 25%, rgba(0, 119, 190, 0.04) 26%, transparent 27%, transparent 74%, rgba(0, 119, 190, 0.04) 75%, rgba(0, 119, 190, 0.04) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(0, 119, 190, 0.04) 25%, rgba(0, 119, 190, 0.04) 26%, transparent 27%, transparent 74%, rgba(0, 119, 190, 0.04) 75%, rgba(0, 119, 190, 0.04) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+}
