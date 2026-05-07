@@ -25,6 +25,7 @@ export const terminalCommands: Record<Language, TerminalCommands> = {
       '  clear    - Limpiar terminal',
       '  ls       - Listar comandos',
       '  whoami   - Usuario actual',
+      '  reset    - Reiniciar terminal',
     ],
     about: [
       '> Mario Canales Sánchez',
@@ -61,6 +62,7 @@ export const terminalCommands: Record<Language, TerminalCommands> = {
       'help',
       'clear',
       'whoami',
+      'reset',
     ],
     whoami: [
       '$ whoami',
@@ -91,6 +93,7 @@ export const terminalCommands: Record<Language, TerminalCommands> = {
       '  clear    - Clear terminal',
       '  ls       - List commands',
       '  whoami   - Current user',
+      '  reset    - Reset terminal',
     ],
     about: [
       '> Mario Canales Sánchez',
@@ -127,6 +130,7 @@ export const terminalCommands: Record<Language, TerminalCommands> = {
       'help',
       'clear',
       'whoami',
+      'reset',
     ],
     whoami: [
       '$ whoami',

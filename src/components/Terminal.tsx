@@ -97,10 +97,11 @@ export function Terminal() {
       return
     }
 
-    if (baseCmd === 'base') {
-      if (isSynth) {
-        toggleSynth()
-      }
+    if (baseCmd === 'base' || baseCmd === 'reset') {
+      setTheme('light')
+      if (isSynth) toggleSynth()
+      if (isBarbie) toggleBarbie()
+      if (isObi) toggleObi()
       const output = ['✨ Returning to base theme ✨']
       const newCommand: Command = {
         input: cmd,
