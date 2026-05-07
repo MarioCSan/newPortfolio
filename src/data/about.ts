@@ -12,7 +12,7 @@ export interface About {
 export const about: About = {
   name: 'Mario Canales Sánchez',
   title: 'Backend Engineer & Cloud Architect',
-  profileImage: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+  profileImage: '/images/aboutme.jpg',
   bio: `Empecé mi carrera como developer junior queriendo entenderlo todo. Hoy, después de más de una década, sigo siendo igual de curioso pero con cicatrices de producción. He construido sistemas que procesan millones de transacciones diarias, escalado arquitecturas de monolitos a microservicios, y resolvido problemas que "según las métricas, no deberían existir".
 
 Lo que me fascina del backend no es escribir código bonito (aunque también importa), sino diseñar sistemas que funcionan bajo presión. Esos momentos a las 3AM cuando descubres un race condition que lleva 6 meses en producción sin que nadie lo note. O cuando optimizas una query y reduces latencia de 500ms a 15ms. Eso es la adrenalina de ingeniería que me motiva.

@@ -16,7 +16,7 @@ export function Hero() {
               {t.hero.cta}
             </a>
             <a
-              href="https://github.com/mariocdev"
+              href="https://github.com/mariocsan"
               target="_blank"
               rel="noopener noreferrer"
               className="btn secondary"
@@ -29,13 +29,13 @@ export function Hero() {
         <div className={styles.highlight}>
           <div className={styles.card}>
             <div className={styles.stat}>
-              <span className={styles.value}>10+</span>
+              <span className={styles.value}>4+</span>
               <span className={styles.label}>{t.hero.yearsExp}</span>
             </div>
           </div>
           <div className={styles.card}>
             <div className={styles.stat}>
-              <span className={styles.value}>50+</span>
+              <span className={styles.value}>30+</span>
               <span className={styles.label}>{t.hero.projectsBuilt}</span>
             </div>
           </div>
