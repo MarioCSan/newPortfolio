@@ -10,6 +10,10 @@ export function ProjectCard({ project }: ProjectCardProps) {
     <article className={styles.card}>
       {project.featured && <div className={styles.featured}>Featured</div>}
 
+      {project.image && (
+        <img src={project.image} alt={project.title} className={styles.image} />
+      )}
+
       <div className={styles.content}>
         <h3>{project.title}</h3>
         <p>{project.description}</p>

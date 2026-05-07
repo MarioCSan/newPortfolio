@@ -14,7 +14,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #0078d4, #e5e5e7);
+  background: linear-gradient(to bottom, #7C3AED, #e5e5e7);
 }
 
 .timelineItem {
@@ -36,7 +36,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #0078d4;
+  background-color: #7C3AED;
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
@@ -56,7 +56,7 @@
 }
 
 .company {
-  color: #0078d4;
+  color: #7C3AED;
   font-weight: 600;
   margin: 0;
   margin-bottom: 0.5rem;

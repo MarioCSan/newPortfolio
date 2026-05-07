@@ -8,7 +8,9 @@ export interface Project {
     value: string
   }[]
   github: string
+  image?: string
   featured: boolean
+  corporate?: boolean
 }
 
 export const projects: Project[] = [
@@ -23,6 +25,7 @@ export const projects: Project[] = [
       { label: 'Uptime', value: '99.99%' }
     ],
     github: 'https://github.com/mariocdev/distributed-cache',
+    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop',
     featured: true
   },
   {
@@ -36,6 +39,7 @@ export const projects: Project[] = [
       { label: 'Success Rate', value: '99.97%' }
     ],
     github: 'https://github.com/mariocdev/payment-processor',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
     featured: true
   },
   {
@@ -49,6 +53,7 @@ export const projects: Project[] = [
       { label: 'Compression', value: '90%' }
     ],
     github: 'https://github.com/mariocdev/analytics-platform',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
     featured: true
   },
   {
@@ -62,6 +67,7 @@ export const projects: Project[] = [
       { label: 'Availability', value: '99.95%' }
     ],
     github: 'https://github.com/mariocdev/api-gateway',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop',
     featured: false
   },
   {
@@ -75,6 +81,7 @@ export const projects: Project[] = [
       { label: 'Overhead', value: '<2%' }
     ],
     github: 'https://github.com/mariocdev/monitoring-system',
+    image: 'https://images.unsplash.com/photo-1661092334529-e0e30cf57e44?w=800&h=500&fit=crop',
     featured: false
   },
   {
@@ -88,6 +95,55 @@ export const projects: Project[] = [
       { label: 'Latency Reduction', value: '70%' }
     ],
     github: 'https://github.com/mariocdev/db-sharding',
+    image: 'https://images.unsplash.com/photo-1572365992253-3cb3e56dd362?w=800&h=500&fit=crop',
+    featured: false
+  }
+]
+
+export const corporateProjects: Project[] = [
+  {
+    id: 'corp-migration',
+    title: 'Enterprise Cloud Migration',
+    description: 'Led migration of legacy monolithic application to Azure cloud. Implemented microservices architecture, containerization with Docker, and Kubernetes orchestration. Reduced infrastructure costs by 40% while improving performance.',
+    tags: ['Azure', 'Docker', 'Kubernetes', 'Enterprise'],
+    metrics: [
+      { label: 'Apps Migrated', value: '12' },
+      { label: 'Cost Reduction', value: '40%' },
+      { label: 'Downtime', value: '0 hours' }
+    ],
+    github: 'https://github.com/mariocdev/enterprise-migration',
+    image: 'https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=800&h=500&fit=crop',
+    corporate: true,
+    featured: false
+  },
+  {
+    id: 'corp-mlops',
+    title: 'MLOps Platform',
+    description: 'Built comprehensive MLOps platform for data science team. Automated model training, validation, and deployment pipelines. Integrated with Azure ML Services for production inference and monitoring.',
+    tags: ['Azure ML', 'Python', '.NET', 'ML Pipeline'],
+    metrics: [
+      { label: 'Training Time', value: '2.5 hours' },
+      { label: 'Models in Prod', value: '18' },
+      { label: 'Deployment Success', value: '99.8%' }
+    ],
+    github: 'https://github.com/mariocdev/mlops-platform',
+    image: 'https://images.unsplash.com/photo-1677442d019cecf8b5a4899145e0a7f71e6b27f53?w=800&h=500&fit=crop',
+    corporate: true,
+    featured: false
+  },
+  {
+    id: 'corp-realtime',
+    title: 'Real-Time Collaboration Engine',
+    description: 'Developed real-time collaboration platform supporting 100K+ concurrent users. Implemented WebSocket infrastructure with SignalR, distributed state management, and conflict resolution algorithms.',
+    tags: ['SignalR', 'C#', 'Real-Time', 'Scalability'],
+    metrics: [
+      { label: 'Concurrent Users', value: '100K+' },
+      { label: 'Message Latency', value: '<50ms' },
+      { label: 'Uptime', value: '99.99%' }
+    ],
+    github: 'https://github.com/mariocdev/realtime-collab',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop',
+    corporate: true,
     featured: false
   }
 ]

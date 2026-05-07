@@ -20,7 +20,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: #0078d4;
+  background-color: #7C3AED;
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -28,6 +28,14 @@
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
 }
 
 .content {
@@ -66,7 +74,7 @@
 .metricValue {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #0078d4;
+  color: #7C3AED;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -90,7 +98,7 @@
 }
 
 .link {
-  color: #0078d4;
+  color: #7C3AED;
   font-weight: 500;
   transition: all 0.2s ease;
   display: inline-flex;

@@ -8,7 +8,9 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: 'Projects', href: '#projects' },
+  { label: 'Corporate', href: '#corporate-projects' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Certs', href: '#certificates' },
   { label: 'Experience', href: '#experience' },
   { label: 'Contact', href: 'mailto:canalessanchezmario@gmail.com' }
 ]
