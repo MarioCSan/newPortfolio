@@ -57,12 +57,12 @@ export const translations = {
     certs: {
       title: 'Certificaciones',
       subtitle: 'Certificaciones reconocidas internacionalmente que validan expertise en plataformas cloud y DevOps.',
-      viewCred: 'Ver Credencial →'
-    },
-    experience: {
-      title: 'Experiencia',
+      viewCred: 'Ver Credencial →',
       issued: 'Expedido',
       expires: 'Expira'
+    },
+    experience: {
+      title: 'Experiencia'
     },
     footer: {
       getInTouch: 'Ponte en Contacto',
@@ -105,7 +105,10 @@ export const translations = {
     },
     projects: {
       title: 'Featured Work',
-      subtitle: 'A selection of production systems and architectures built with modern technologies.'
+      subtitle: 'A selection of production systems and architectures built with modern technologies.',
+      featured: 'Featured',
+      viewGithub: 'View on GitHub →',
+      more: 'More Projects'
     },
     corporate: {
       title: 'Corporate Projects',
@@ -116,17 +119,20 @@ export const translations = {
       architecture: 'Scalability First',
       performance: 'Performance Obsessed',
       reliability: 'Reliability & Uptime',
-      code: 'Clean Architecture'
+      code: 'Clean Architecture',
+      architectureDesc: 'Designing microservices, distributed systems, and cloud-native architectures that scale to millions of users.',
+      performanceDesc: 'Optimizing for latency, throughput, and resource efficiency. Profiling and benchmarking as standard practice.',
+      reliabilityDesc: 'Building systems with 99.99% uptime. Focusing on observability, monitoring, and automatic recovery.'
     },
     certs: {
       title: 'Certifications',
       subtitle: 'Industry-recognized certifications validating technical expertise across cloud platforms and DevOps.',
-      viewCred: 'View Credential →'
-    },
-    experience: {
-      title: 'Experience',
+      viewCred: 'View Credential →',
       issued: 'Issued',
       expires: 'Expires'
+    },
+    experience: {
+      title: 'Experience'
     },
     footer: {
       getInTouch: 'Get in Touch',

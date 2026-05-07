@@ -27,7 +27,7 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
           </span>
           {certificate.expiryDate && (
             <span className={styles.date}>
-              {t.experience.expires}: <strong>{certificate.expiryDate}</strong>
+              {t.certs.expires}: <strong>{certificate.expiryDate}</strong>
             </span>
           )}
         </div>

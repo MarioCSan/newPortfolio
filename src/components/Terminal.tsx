@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { useTranslation } from '../hooks/useTranslation'
 import { useSynth } from '../context/SynthContext'
 import styles from './Terminal.module.css'
 
@@ -17,7 +16,6 @@ export function Terminal() {
   const [historyIndex, setHistoryIndex] = useState(-1)
   const inputRef = useRef<HTMLInputElement>(null)
   const outputRef = useRef<HTMLDivElement>(null)
-  const t = useTranslation()
   const { isSynth, toggleSynth } = useSynth()
 
   const commandHelp: { [key: string]: string[] } = {
@@ -96,10 +94,15 @@ export function Terminal() {
   useEffect(() => {
     if (commands.length > 0) {
       const lastCommand = commands[commands.length - 1]
-      if (lastCommand.displayOutput && lastCommand.displayOutput.length < lastCommand.output.length) {
+      const displayOutput = lastCommand.displayOutput || []
+      if (displayOutput.length < lastCommand.output.length) {
         const timeout = setTimeout(() => {
           const newCommands = [...commands]
-          newCommands[newCommands.length - 1].displayOutput?.push(lastCommand.output[lastCommand.displayOutput.length])
+          const lastCmd = newCommands[newCommands.length - 1]
+          if (lastCmd.displayOutput === undefined) {
+            lastCmd.displayOutput = []
+          }
+          lastCmd.displayOutput.push(lastCmd.output[lastCmd.displayOutput.length])
           setCommands([...newCommands])
         }, 50)
         return () => clearTimeout(timeout)

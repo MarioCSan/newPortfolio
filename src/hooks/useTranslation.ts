@@ -1,5 +1,5 @@
 import { useAppContext } from '../context/AppContext'
-import { translations, Language } from '../data/translations'
+import { translations } from '../data/translations'
 
 export function useTranslation() {
   const { language } = useAppContext()
