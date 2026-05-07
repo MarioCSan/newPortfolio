@@ -1,0 +1,74 @@
+.toggles {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.toggleGroup {
+  display: flex;
+  gap: 0.25rem;
+  background-color: var(--bg-secondary);
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+
+.toggleBtn {
+  background: none;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-secondary);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.toggleBtn:hover {
+  color: var(--text-primary);
+}
+
+.toggleBtn.active {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.themeBtn {
+  background: none;
+  border: 1px solid var(--border);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+  color: var(--text-primary);
+}
+
+.themeBtn:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--primary);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .toggles {
+    gap: 0.75rem;
+  }
+
+  .toggleBtn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .themeBtn {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}

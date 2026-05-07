@@ -4,23 +4,21 @@
 
 .timeline {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 60px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 0;
+  left: 19px;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #7C3AED, #e5e5e7);
+  background: linear-gradient(to bottom, #0066CC, #e5e5e7);
 }
 
 .timelineItem {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2rem;
+  display: block;
   margin-bottom: 3rem;
   position: relative;
 }
@@ -36,12 +34,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #7C3AED;
+  background-color: #0066CC;
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
   position: absolute;
-  left: -21px;
+  left: -40px;
   top: 0;
 }
 
@@ -56,7 +54,7 @@
 }
 
 .company {
-  color: #7C3AED;
+  color: #0066CC;
   font-weight: 600;
   margin: 0;
   margin-bottom: 0.5rem;

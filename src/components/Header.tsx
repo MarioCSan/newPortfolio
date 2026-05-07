@@ -1,22 +1,21 @@
 import { useState } from 'react'
+import { useTranslation } from '../hooks/useTranslation'
+import { ThemeToggle } from './ThemeToggle'
 import styles from './Header.module.css'
-
-interface NavLink {
-  label: string
-  href: string
-}
-
-const navLinks: NavLink[] = [
-  { label: 'Projects', href: '#projects' },
-  { label: 'Corporate', href: '#corporate-projects' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Certs', href: '#certificates' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: 'mailto:canalessanchezmario@gmail.com' }
-]
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const t = useTranslation()
+
+  const navLinks = [
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.projects, href: '#projects' },
+    { label: t.nav.corporate, href: '#corporate-projects' },
+    { label: t.nav.skills, href: '#skills' },
+    { label: t.nav.certs, href: '#certificates' },
+    { label: t.nav.experience, href: '#experience' },
+    { label: t.nav.contact, href: 'mailto:canalessanchezmario@gmail.com' }
+  ]
 
   return (
     <header className={styles.header}>
@@ -37,6 +36,8 @@ export function Header() {
               </a>
             ))}
           </nav>
+
+          <ThemeToggle />
 
           <button
             className={styles.mobileToggle}

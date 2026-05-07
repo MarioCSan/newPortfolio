@@ -28,7 +28,7 @@
 }
 
 .link {
-  color: #7C3AED;
+  color: #0066CC;
   font-weight: 500;
   transition: opacity 0.2s ease;
 }
@@ -49,7 +49,7 @@
 }
 
 .social a:hover {
-  color: #7C3AED;
+  color: #0066CC;
 }
 
 .bottom {

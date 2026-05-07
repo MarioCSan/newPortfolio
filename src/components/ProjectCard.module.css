@@ -20,7 +20,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background-color: #7C3AED;
+  background-color: #0066CC;
   color: #ffffff;
   font-size: 0.75rem;
   font-weight: 700;
@@ -74,7 +74,7 @@
 .metricValue {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #7C3AED;
+  color: #0066CC;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .link {
-  color: #7C3AED;
+  color: #0066CC;
   font-weight: 500;
   transition: all 0.2s ease;
   display: inline-flex;
