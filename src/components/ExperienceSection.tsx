@@ -1,11 +1,14 @@
 import { cv } from '../data/cv'
+import { useTranslation } from '../hooks/useTranslation'
 import styles from './ExperienceSection.module.css'
 
 export function ExperienceSection() {
+  const t = useTranslation()
+
   return (
     <section id="experience" className={`section ${styles.experience}`}>
       <div className="container">
-        <h2>Experience</h2>
+        <h2>{t.experience.title}</h2>
 
         <div className={styles.timeline}>
           {cv.experience.map((job, index) => (

@@ -1,5 +1,5 @@
 .footer {
-  background-color: #1d1d1f;
+  background-color: #0f1419;
   color: #ffffff;
   padding: 4rem 0 2rem;
   margin-top: 4rem;
@@ -11,7 +11,7 @@
   gap: 3rem;
   margin-bottom: 3rem;
   padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .section h4 {
@@ -22,7 +22,13 @@
 }
 
 .section p {
-  color: #a1a1a6;
+  color: var(--text-tertiary);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.section p {
+  color: var(--text-tertiary);
   font-size: 0.95rem;
   margin-bottom: 0.75rem;
 }
@@ -44,7 +50,7 @@
 }
 
 .social a {
-  color: #a1a1a6;
+  color: var(--text-tertiary);
   transition: color 0.2s ease;
 }
 
@@ -54,7 +60,7 @@
 
 .bottom {
   text-align: center;
-  color: #86868b;
+  color: var(--text-tertiary);
   font-size: 0.85rem;
 }
 

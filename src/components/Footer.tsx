@@ -1,6 +1,8 @@
+import { useTranslation } from '../hooks/useTranslation'
 import styles from './Footer.module.css'
 
 export function Footer() {
+  const t = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -8,15 +10,15 @@ export function Footer() {
       <div className="container">
         <div className={styles.content}>
           <div className={styles.section}>
-            <h4>Get in Touch</h4>
-            <p>Feel free to reach out for collaborations or opportunities.</p>
+            <h4>{t.footer.getInTouch}</h4>
+            <p>{t.footer.touchMessage}</p>
             <a href="mailto:canalessanchezmario@gmail.com" className={styles.link}>
               canalessanchezmario@gmail.com
             </a>
           </div>
 
           <div className={styles.section}>
-            <h4>Follow</h4>
+            <h4>{t.footer.follow}</h4>
             <div className={styles.social}>
               <a
                 href="https://github.com/mariocdev"
@@ -44,7 +46,7 @@ export function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>© {currentYear} Mario Canales. Built with React + TypeScript.</p>
+          <p>© {currentYear} Mario Canales. {t.footer.copyright}</p>
         </div>
       </div>
     </footer>

@@ -12,7 +12,7 @@
 .skillGroup h4 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  color: #1d1d1f;
+  color: var(--text-primary);
 }
 
 .tags {
@@ -29,14 +29,14 @@
 }
 
 .card {
-  background-color: #f5f5f7;
+  background-color: var(--bg-secondary);
   border-radius: 12px;
   padding: 2rem;
   transition: all 0.3s ease;
 }
 
 .card:hover {
-  background-color: #ebebf0;
+  background-color: var(--bg-tertiary);
   transform: translateY(-2px);
 }
 

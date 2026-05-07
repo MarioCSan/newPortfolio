@@ -23,13 +23,13 @@ html {
 }
 
 html[data-theme="dark"] {
-  --bg-primary: #0A0E27;
-  --bg-secondary: #1a1f3a;
-  --bg-tertiary: #2a3150;
-  --text-primary: #f5f5f7;
-  --text-secondary: #d1d1d6;
-  --text-tertiary: #a1a1a6;
-  --border: #3a4050;
+  --bg-primary: #0f1419;
+  --bg-secondary: #1a1f2e;
+  --bg-tertiary: #24293c;
+  --text-primary: #f5f7fa;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+  --border: #334155;
 }
 
 body {

@@ -1,17 +1,19 @@
 import { projects } from '../data/projects'
 import { ProjectCard } from './ProjectCard'
+import { useTranslation } from '../hooks/useTranslation'
 import styles from './ProjectsSection.module.css'
 
 export function ProjectsSection() {
+  const t = useTranslation()
   const featuredProjects = projects.filter((p) => p.featured)
   const otherProjects = projects.filter((p) => !p.featured)
 
   return (
     <section id="projects" className={`section ${styles.projects}`}>
       <div className="container">
-        <h2>Featured Work</h2>
+        <h2>{t.projects.title}</h2>
         <p className={styles.description}>
-          A selection of production systems and architectures built with modern technologies.
+          {t.projects.subtitle}
         </p>
 
         <div className={styles.featured}>
@@ -22,7 +24,7 @@ export function ProjectsSection() {
 
         {otherProjects.length > 0 && (
           <>
-            <h3 style={{ marginTop: '4rem' }}>More Projects</h3>
+            <h3 style={{ marginTop: '4rem' }}>{t.projects.more}</h3>
             <div className={styles.grid}>
               {otherProjects.map((project) => (
                 <ProjectCard key={project.id} project={project} />

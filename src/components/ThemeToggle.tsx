@@ -13,14 +13,14 @@ export function ThemeToggle() {
           onClick={() => setLanguage('es')}
           title="Español"
         >
-          ES
+          🇪🇸
         </button>
         <button
           className={`${styles.toggleBtn} ${language === 'en' ? styles.active : ''}`}
           onClick={() => setLanguage('en')}
           title="English"
         >
-          EN
+          🇬🇧
         </button>
       </div>
 

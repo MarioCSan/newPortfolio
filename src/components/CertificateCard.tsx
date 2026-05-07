@@ -1,4 +1,5 @@
 import { Certificate } from '../data/certificates'
+import { useTranslation } from '../hooks/useTranslation'
 import styles from './CertificateCard.module.css'
 
 interface CertificateCardProps {
@@ -6,6 +7,8 @@ interface CertificateCardProps {
 }
 
 export function CertificateCard({ certificate }: CertificateCardProps) {
+  const t = useTranslation()
+
   return (
     <article className={styles.card}>
       {certificate.image && (
@@ -20,11 +23,11 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
 
         <div className={styles.dates}>
           <span className={styles.date}>
-            Issued: <strong>{certificate.issueDate}</strong>
+            {t.certs.issued}: <strong>{certificate.issueDate}</strong>
           </span>
           {certificate.expiryDate && (
             <span className={styles.date}>
-              Expires: <strong>{certificate.expiryDate}</strong>
+              {t.experience.expires}: <strong>{certificate.expiryDate}</strong>
             </span>
           )}
         </div>
@@ -36,7 +39,7 @@ export function CertificateCard({ certificate }: CertificateCardProps) {
             rel="noopener noreferrer"
             className={styles.link}
           >
-            View Credential →
+            {t.certs.viewCred}
           </a>
         )}
       </div>

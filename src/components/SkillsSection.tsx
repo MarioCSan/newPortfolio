@@ -1,11 +1,14 @@
 import { cv } from '../data/cv'
+import { useTranslation } from '../hooks/useTranslation'
 import styles from './SkillsSection.module.css'
 
 export function SkillsSection() {
+  const t = useTranslation()
+
   return (
     <section id="skills" className={`section ${styles.skills}`}>
       <div className="container">
-        <h2>Technical Skills</h2>
+        <h2>{t.skills.title}</h2>
 
         <div className={styles.grid}>
           {cv.skills.map((skillGroup) => (
@@ -24,24 +27,21 @@ export function SkillsSection() {
 
         <div className={styles.highlight}>
           <div className={styles.card}>
-            <h4>Architecture Focus</h4>
+            <h4>{t.skills.architecture}</h4>
             <p>
-              Building microservices, distributed systems, and cloud-native architectures
-              that scale to millions of users.
+              {t.skills.architectureDesc}
             </p>
           </div>
           <div className={styles.card}>
-            <h4>Performance First</h4>
+            <h4>{t.skills.performance}</h4>
             <p>
-              Optimizing for latency, throughput, and resource efficiency. Profiling and
-              benchmarking as standard practice.
+              {t.skills.performanceDesc}
             </p>
           </div>
           <div className={styles.card}>
-            <h4>Reliability</h4>
+            <h4>{t.skills.reliability}</h4>
             <p>
-              Building systems with 99.99% uptime. Focusing on observability, monitoring,
-              and automated recovery.
+              {t.skills.reliabilityDesc}
             </p>
           </div>
         </div>

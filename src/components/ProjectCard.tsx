@@ -1,4 +1,5 @@
 import { Project } from '../data/projects'
+import { useTranslation } from '../hooks/useTranslation'
 import styles from './ProjectCard.module.css'
 
 interface ProjectCardProps {
@@ -6,9 +7,11 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const t = useTranslation()
+
   return (
     <article className={styles.card}>
-      {project.featured && <div className={styles.featured}>Featured</div>}
+      {project.featured && <div className={styles.featured}>{t.projects.featured}</div>}
 
       {project.image && (
         <img src={project.image} alt={project.title} className={styles.image} />
@@ -45,7 +48,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           rel="noopener noreferrer"
           className={styles.link}
         >
-          View on GitHub →
+          {t.projects.viewGithub}
         </a>
       </footer>
     </article>

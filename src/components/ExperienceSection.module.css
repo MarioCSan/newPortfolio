@@ -4,17 +4,17 @@
 
 .timeline {
   position: relative;
-  padding-left: 60px;
+  padding-left: 100px;
 }
 
 .timeline::before {
   content: '';
   position: absolute;
-  left: 19px;
+  left: 39px;
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #0066CC, #e5e5e7);
+  background: linear-gradient(to bottom, var(--primary), var(--border));
 }
 
 .timelineItem {
@@ -34,12 +34,12 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #0066CC;
+  background-color: var(--primary);
   color: #ffffff;
   font-weight: 700;
   font-size: 1rem;
   position: absolute;
-  left: -40px;
+  left: -80px;
   top: 0;
 }
 
@@ -50,11 +50,11 @@
 .content h3 {
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
-  color: #1d1d1f;
+  color: var(--text-primary);
 }
 
 .company {
-  color: #0066CC;
+  color: var(--primary);
   font-weight: 600;
   margin: 0;
   margin-bottom: 0.5rem;
@@ -63,7 +63,7 @@
 .period {
   display: inline-block;
   font-size: 0.85rem;
-  color: #86868b;
+  color: var(--text-tertiary);
   margin-bottom: 1rem;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -72,25 +72,24 @@
   margin: 0;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #424245;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {
   .timeline {
-    padding-left: 0;
+    padding-left: 80px;
   }
 
   .timeline::before {
-    left: 19px;
+    left: 39px;
   }
 
   .timelineItem {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   .marker {
-    left: -1px;
+    left: -80px;
   }
 
   .content h3 {
