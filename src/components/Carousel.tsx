@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import styles from './Carousel.module.css'
 
 interface CarouselProps {
@@ -16,6 +16,9 @@ export function Carousel({
 }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
+  const viewportRef = useRef<HTMLDivElement>(null)
 
   const totalItems = items.length
   const maxIndex = Math.max(0, totalItems - itemsPerView)
@@ -42,13 +45,44 @@ export function Carousel({
     setCurrentIndex(Math.min(index, maxIndex))
   }
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > 50
+    const isRightSwipe = distance < -50
+
+    if (isLeftSwipe) {
+      goToNext()
+    } else if (isRightSwipe) {
+      goToPrevious()
+    }
+
+    setTouchStart(0)
+    setTouchEnd(0)
+  }
+
   return (
     <div
       className={styles.carousel}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div className={styles.viewport}>
+      <div
+        ref={viewportRef}
+        className={styles.viewport}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div
           className={styles.track}
           style={{
