@@ -5,6 +5,16 @@ import styles from './SkillsSection.module.css'
 export function SkillsSection() {
   const t = useTranslation()
 
+  const getCategoryLabel = (originalCategory: string): string => {
+    const categoryMap: Record<string, string> = {
+      'Backend & Cloud': t.cv.skills.backendCloud,
+      'Databases': t.cv.skills.databases,
+      'Frontend': t.cv.skills.frontend,
+      'DevOps & Tools': t.cv.skills.devops,
+    }
+    return categoryMap[originalCategory] || originalCategory
+  }
+
   return (
     <section id="skills" className={`section ${styles.skills}`}>
       <div className="container">
@@ -13,7 +23,7 @@ export function SkillsSection() {
         <div className={styles.grid}>
           {cv.skills.map((skillGroup) => (
             <div key={skillGroup.category} className={styles.skillGroup}>
-              <h4>{skillGroup.category}</h4>
+              <h4>{getCategoryLabel(skillGroup.category)}</h4>
               <div className={styles.tags}>
                 {skillGroup.items.map((skill) => (
                   <span key={skill} className="tag">

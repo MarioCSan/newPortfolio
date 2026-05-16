@@ -1,4 +1,3 @@
-import { cv } from '../data/cv'
 import { useTranslation } from '../hooks/useTranslation'
 import styles from './Hero.module.css'
 
@@ -10,7 +9,7 @@ export function Hero() {
       <div className="container">
         <div className={styles.content}>
           <h1>{t.hero.headline}</h1>
-          <p className={styles.subtitle}>{cv.bio}</p>
+          <p className={styles.subtitle}>{t.cv.bio}</p>
           <div className={styles.cta}>
             <a href="mailto:canalessanchezmario@gmail.com" className="btn">
               {t.hero.cta}
