@@ -11,60 +11,31 @@ export interface Certificate {
 
 export const certificates: Certificate[] = [
   {
-    id: 'az-305',
-    name: 'Azure Solutions Architect Expert',
-    issuer: 'Microsoft',
-    issueDate: '2024-06',
-    credentialId: 'ABC123DEF456',
-    credentialUrl: 'https://learn.microsoft.com/en-us/credentials/',
-    image: 'https://images.unsplash.com/photo-1516534775068-bb57914b763e?w=300&h=300&fit=crop'
-  },
-  {
     id: 'az-204',
     name: 'Azure Developer Associate',
     issuer: 'Microsoft',
-    issueDate: '2024-03',
+    issueDate: '4/15/2021',
     credentialId: 'XYZ789UVW012',
-    credentialUrl: 'https://learn.microsoft.com/en-us/credentials/',
-    image: 'https://images.unsplash.com/photo-1516534775068-bb57914b763e?w=300&h=300&fit=crop'
+    credentialUrl: 'https://www.credly.com/badges/f38c45ea-c9f1-44aa-ac0f-0410ca716a95/public_url',
+    image: 'https://images.credly.com/size/680x680/images/63316b60-f62d-4e51-aacc-c23cb850089c/azure-developer-associate-600x600.png'
+
   },
   {
-    id: 'cka',
-    name: 'Certified Kubernetes Administrator',
-    issuer: 'Linux Foundation',
-    issueDate: '2024-01',
-    expiryDate: '2027-01',
-    credentialId: 'LF-CKA-2024-001',
-    credentialUrl: 'https://www.credly.com/',
-    image: 'https://images.unsplash.com/photo-1516534775068-bb57914b763e?w=300&h=300&fit=crop'
-  },
-  {
-    id: 'aws-sap',
-    name: 'AWS Certified Solutions Architect Professional',
+    id: 'DVA-C01',
+    name: 'AWS Certified Developer - Associate',
     issuer: 'Amazon Web Services',
-    issueDate: '2023-11',
-    expiryDate: '2026-11',
-    credentialId: 'AWS-SAP-2023-001',
-    credentialUrl: 'https://www.credly.com/',
-    image: 'https://images.unsplash.com/photo-1516534775068-bb57914b763e?w=300&h=300&fit=crop'
+    issueDate: '5/17/2021',
+    credentialId: 'f38c45ea-c9f1-44aa-ac0f-0410ca716a95',
+    credentialUrl: 'https://www.credly.com/badges/ffac012f-2153-414c-a95f-a977fbebae47/public_url',
+    image: 'https://images.credly.com/size/680x680/images/b9feab85-1a43-4f6c-99a5-631b88d5461b/image.png'
   },
   {
-    id: 'scrum-master',
-    name: 'Professional Scrum Master I',
-    issuer: 'Scrum.org',
-    issueDate: '2023-09',
-    credentialId: 'PSM-2023-001',
-    credentialUrl: 'https://www.scrum.org/',
-    image: 'https://images.unsplash.com/photo-1516534775068-bb57914b763e?w=300&h=300&fit=crop'
-  },
-  {
-    id: 'docker',
-    name: 'Docker Certified Associate',
-    issuer: 'Docker',
-    issueDate: '2023-07',
-    expiryDate: '2026-07',
-    credentialId: 'DCA-2023-001',
-    credentialUrl: 'https://www.credly.com/',
-    image: 'https://images.unsplash.com/photo-1516534775068-bb57914b763e?w=300&h=300&fit=crop'
+    id: 'Google Project Management Professional Certificate (v2)',
+    name: 'Google Project Management Professional Certificate (v2)',
+    issuer: 'Google via Coursera',
+    issueDate: '1/31/2025',
+    credentialId: 'ad06dd90-f7ac-4ab9-aa2c-3c79eb01111b',
+    credentialUrl: 'https://www.credly.com/badges/ad06dd90-f7ac-4ab9-aa2c-3c79eb01111b/public_url',
+    image: 'https://images.credly.com/size/680x680/images/a34119f2-402f-4443-8555-ccfe2520f1df/GCC_badge_PGM_1000x1000.png'
   }
 ]

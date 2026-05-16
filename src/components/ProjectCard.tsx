@@ -86,16 +86,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </div>
 
-      <footer className={styles.footer}>
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.link}
-        >
-          {t.projects.viewGithub}
-        </a>
-      </footer>
+      {!project.corporate && (
+        <footer className={styles.footer}>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.link}
+          >
+            {t.projects.viewGithub}
+          </a>
+        </footer>
+      )}
     </article>
   )
 }

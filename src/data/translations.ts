@@ -12,7 +12,7 @@ export const translations = {
       contact: 'Contacto'
     },
     hero: {
-      headline: 'La lógica es hermosa. Construyendo backends robustos con .NET y Azure.',
+      headline: 'Construyendo backends robustos con .NET y Azure.',
       cta: 'Contactame',
       github: 'GitHub →',
       yearsExp: 'Años de Experiencia',
@@ -67,9 +67,9 @@ export const translations = {
     cv: {
       title: 'Experiencia Laboral',
       name: 'Mario Canales Sánchez',
-      jobTitle: 'Ingeniero Backend & Arquitecto Cloud',
+      jobTitle: 'Desarrollador Backend & Arquitecto Cloud',
       location: 'Madrid, España',
-      bio: 'Ingeniero Backend especializado en .NET, Azure y sistemas distribuidos. Construyo arquitecturas escalables y de alto rendimiento que alimentan sistemas en producción.',
+      bio: 'Desarrollador Backend especializado en .NET, Azure y sistemas distribuidos. Construyo arquitecturas escalables y de alto rendimiento que alimentan sistemas en producción.',
       skills: {
         backendCloud: 'Backend & Cloud',
         databases: 'Bases de Datos',
@@ -78,30 +78,35 @@ export const translations = {
       },
       jobs: [
         {
-          title: 'Ingeniero Backend Senior',
-          company: 'Tech Innovation Labs',
-          period: '2022 - Presente',
-          description: 'Lideré el desarrollo de arquitectura de microservicios manejando 10M+ solicitudes diarias. Optimicé queries de base de datos reduciendo latencia un 60%. Mentoricé 5 ingenieros junior.'
+          title: 'Senior Backend developer',
+          company: 'CEF.-UDIMA',
+          period: 'Enero 2026 - Present',
+          description: 'Led development of microservices architecture handling 10M+ daily requests. Optimized database queries reducing latency by 60%. Mentored 5 junior engineers.'
         },
         {
-          title: 'Ingeniero Full Stack',
-          company: 'CloudScale Systems',
-          period: '2020 - 2022',
-          description: 'Construí sistema de procesamiento de pagos distribuido en .NET. Implementé pipelines de CI/CD en Azure DevOps. Logré uptime de 99.99% en SLA.'
+          title: 'Junior backend developer',
+          company: 'Viajes El corte Inglés',
+          period: 'Marzo 2024 - Diciembre 2025',
+          description: 'Built distributed payment processing system in .NET. Implemented Azure DevOps CI/CD pipelines. Achieved 99.99% uptime SLA.'
         },
         {
-          title: 'Desarrollador Junior',
-          company: 'StartupXYZ',
-          period: '2018 - 2020',
-          description: 'Desarrollé APIs REST en ASP.NET Core. Creé dashboards en tiempo real con React. Implementé suite de testing automatizado.'
+          title: 'Junior Developer',
+          company: 'Pepper Asset Services',
+          period: 'Febrero 2022 - Febrero 2024',
+          description: 'Developed REST APIs in ASP.NET Core. Created real-time dashboards with React. Implemented automated testing suite.'
+        }, {
+          title: 'Junior Fullstack Developer',
+          company: 'Quality Compusoft',
+          period: 'Julio 2021 - Diciembre 2021',
+          description: 'Developed REST APIs in ASP.NET Core. Created real-time dashboards with React. Implemented automated testing suite.'
         }
       ]
     },
     projectsData: {
-      
+
       'analytics-platform': {
         title: 'Plataforma de Análisis en Tiempo Real',
-        description: 'Motor de análisis de streaming para telemetría de producto. Ingesta 1B+ eventos diarios, proporciona latencia de query sub-segundo. Construido con Kafka, ClickHouse y workers .NET.'
+        description: 'Motor de análisis de streaming para telemetría de producto. Ingesta 4000+ eventos diarios, proporciona latencia de query sub-segundo. Construido con RabbitMQ, .NET, React, Postgresql y workers escritos en python.'
       },
       'Video-Travel-Manager': {
         title: 'Video Travel Manager',
@@ -273,7 +278,7 @@ export const translations = {
         title: 'Real-Time Analytics Platform',
         description: 'Streaming analytics engine for product telemetry. Ingests 1B+ events daily, provides sub-second query latency. Built with Kafka, ClickHouse, and .NET workers.'
       },
-            'Video-Travel-Manager': {
+      'Video-Travel-Manager': {
         title: 'Video Travel Manager',
         description: 'A self-hosted, private YouTube-like application for your videos. Run it entirely offline within your home network with a beautiful, responsive interface.'
       },

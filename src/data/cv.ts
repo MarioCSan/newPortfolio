@@ -27,38 +27,43 @@ export const cv: CVData = {
   skills: [
     {
       category: 'Backend & Cloud',
-      items: ['.NET 8/9', 'C#', 'Azure Services', 'Docker', 'Kubernetes', 'Microservices']
+      items: ['.NET 8/9', 'C#', 'Azure Services', 'Docker', 'Microservices']
     },
     {
       category: 'Databases',
-      items: ['SQL Server', 'PostgreSQL', 'CosmosDB', 'Redis', 'Entity Framework']
+      items: ['SQL Server', 'PostgreSQL', 'CosmosDB', 'Azure BLOBs', 'Entity Framework']
     },
     {
       category: 'Frontend',
-      items: ['React', 'TypeScript', 'Next.js', 'Tailwind CSS']
+      items: ['React', 'Javascript']
     },
     {
       category: 'DevOps & Tools',
-      items: ['CI/CD', 'GitHub Actions', 'Terraform', 'Git', 'Azure DevOps']
+      items: ['CI/CD', 'Git', 'Azure DevOps']
     }
   ],
   experience: [
     {
-      title: 'Senior Backend Engineer',
-      company: 'Tech Innovation Labs',
-      period: '2022 - Present',
+      title: 'Senior Backend developer',
+      company: 'CEF.-UDIMA',
+      period: '2026 - Present',
       description: 'Led development of microservices architecture handling 10M+ daily requests. Optimized database queries reducing latency by 60%. Mentored 5 junior engineers.'
     },
     {
-      title: 'Full Stack Engineer',
-      company: 'CloudScale Systems',
-      period: '2020 - 2022',
+      title: 'Junior backend developer',
+      company: 'Viajes El corte Ingles Travel Group',
+      period: '2023 - 2025',
       description: 'Built distributed payment processing system in .NET. Implemented Azure DevOps CI/CD pipelines. Achieved 99.99% uptime SLA.'
     },
     {
       title: 'Junior Developer',
-      company: 'StartupXYZ',
-      period: '2018 - 2020',
+      company: 'Pepper Asset Services',
+      period: '2022 - 2023',
+      description: 'Developed REST APIs in ASP.NET Core. Created real-time dashboards with React. Implemented automated testing suite.'
+    },{
+      title: 'Junior Fullstack Developer',
+      company: 'Pepper Asset Services',
+      period: '2021 - 2022',
       description: 'Developed REST APIs in ASP.NET Core. Created real-time dashboards with React. Implemented automated testing suite.'
     }
   ]

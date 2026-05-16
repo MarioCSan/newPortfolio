@@ -7,7 +7,7 @@ export interface ProjectBase {
     label: string
     value: string
   }[]
-  github: string
+  github?: string
   image?: string
   featured: boolean
   corporate?: boolean
@@ -27,7 +27,7 @@ const projectsBase: ProjectBase[] = [
       { label: 'queryLatency', value: '<500ms' },
       { label: 'compression', value: '90%' }
     ],
-    github: 'https://github.com/mariocdev/analytics-platform',
+    github: 'https://github.com/mariosanv/https://github.com/MarioCSan/VicusAnalytics-platform',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
     featured: true
   },
@@ -38,55 +38,55 @@ const projectsBase: ProjectBase[] = [
     github: 'https://github.com/MarioCSan/VideoTravelManager',
     image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=500&fit=crop',
     featured: true
-  },
-  {
-    id: 'payment-processor',
-    tags: ['C#', 'Azure', 'Event-Driven', 'Financial'],
-    metrics: [
-      { label: 'dailyVolume', value: '2M transactions' },
-      { label: 'processingTime', value: '<100ms' },
-      { label: 'successRate', value: '99.97%' }
-    ],
-    github: 'https://github.com/mariocdev/payment-processor',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
-    featured: true
-  },
-  {
-    id: 'api-gateway',
-    tags: ['ASP.NET Core', 'Kubernetes', 'Networking', 'Performance'],
-    metrics: [
-      { label: 'concurrentConns', value: '50K+' },
-      { label: 'gatewayLatency', value: '<2ms' },
-      { label: 'availability', value: '99.95%' }
-    ],
-    github: 'https://github.com/mariocdev/api-gateway',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop',
-    featured: false
-  },
-  {
-    id: 'monitoring-system',
-    tags: ['.NET', 'Observability', 'Metrics', 'Logs'],
-    metrics: [
-      { label: 'dataPoints', value: '500K+' },
-      { label: 'retention', value: '1 year' },
-      { label: 'overhead', value: '<2%' }
-    ],
-    github: 'https://github.com/mariocdev/monitoring-system',
-    image: 'https://images.unsplash.com/photo-1661092334529-e0e30cf57e44?w=800&h=500&fit=crop',
-    featured: false
-  },
-  {
-    id: 'database-sharding',
-    tags: ['SQL Server', 'C#', 'Scalability', 'Databases'],
-    metrics: [
-      { label: 'shards', value: '32+' },
-      { label: 'dataSize', value: '10TB+' },
-      { label: 'latencyReduction', value: '70%' }
-    ],
-    github: 'https://github.com/mariocdev/db-sharding',
-    image: 'https://images.unsplash.com/photo-1572365992253-3cb3e56dd362?w=800&h=500&fit=crop',
-    featured: false
   }
+  // {
+  //   id: 'payment-processor',
+  //   tags: ['C#', 'Azure', 'Event-Driven', 'Financial'],
+  //   metrics: [
+  //     { label: 'dailyVolume', value: '2M transactions' },
+  //     { label: 'processingTime', value: '<100ms' },
+  //     { label: 'successRate', value: '99.97%' }
+  //   ],
+  //   github: 'https://github.com/mariocdev/payment-processor',
+  //   image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop',
+  //   featured: true
+  // },
+  // {
+  //   id: 'api-gateway',
+  //   tags: ['ASP.NET Core', 'Kubernetes', 'Networking', 'Performance'],
+  //   metrics: [
+  //     { label: 'concurrentConns', value: '50K+' },
+  //     { label: 'gatewayLatency', value: '<2ms' },
+  //     { label: 'availability', value: '99.95%' }
+  //   ],
+  //   github: 'https://github.com/mariocdev/api-gateway',
+  //   image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=500&fit=crop',
+  //   featured: false
+  // },
+  // {
+  //   id: 'monitoring-system',
+  //   tags: ['.NET', 'Observability', 'Metrics', 'Logs'],
+  //   metrics: [
+  //     { label: 'dataPoints', value: '500K+' },
+  //     { label: 'retention', value: '1 year' },
+  //     { label: 'overhead', value: '<2%' }
+  //   ],
+  //   github: 'https://github.com/mariocdev/monitoring-system',
+  //   image: 'https://images.unsplash.com/photo-1661092334529-e0e30cf57e44?w=800&h=500&fit=crop',
+  //   featured: false
+  // },
+  // {
+  //   id: 'database-sharding',
+  //   tags: ['SQL Server', 'C#', 'Scalability', 'Databases'],
+  //   metrics: [
+  //     { label: 'shards', value: '32+' },
+  //     { label: 'dataSize', value: '10TB+' },
+  //     { label: 'latencyReduction', value: '70%' }
+  //   ],
+  //   github: 'https://github.com/mariocdev/db-sharding',
+  //   image: 'https://images.unsplash.com/photo-1572365992253-3cb3e56dd362?w=800&h=500&fit=crop',
+  //   featured: false
+  // }
 ]
 
 const corporateProjectsBase: ProjectBase[] = [
@@ -119,12 +119,8 @@ const corporateProjectsBase: ProjectBase[] = [
   {
     id: 'gestion-fundae',
     tags: ['C#', 'ASP.NET Core', 'API Rest', 'Scalability'],
-    metrics: [
-      { label: 'concurrentUsers', value: '100K+' },
-      { label: 'messageLatency', value: '<50ms' },
-      { label: 'uptime', value: '99.99%' }
-    ],
-    github: '',
+
+
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=500&fit=crop',
     corporate: true,
     featured: false
