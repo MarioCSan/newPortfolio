@@ -1,10 +1,13 @@
-import { projects } from '../data/projects'
+import { getProjects } from '../data/projects'
 import { ProjectCard } from './ProjectCard'
 import { useTranslation } from '../hooks/useTranslation'
+import { useAppContext } from '../context/AppContext'
 import styles from './ProjectsSection.module.css'
 
 export function ProjectsSection() {
   const t = useTranslation()
+  const { language } = useAppContext()
+  const projects = getProjects(language)
   const featuredProjects = projects.filter((p) => p.featured)
   const otherProjects = projects.filter((p) => !p.featured)
 

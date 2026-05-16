@@ -128,8 +128,9 @@ const corporateProjectsBase: ProjectBase[] = [
 ]
 
 export function enrichProjectWithTranslations(projectBase: ProjectBase, language: Language): Project {
-  const projectData = translations[language].projectsData[projectBase.id as keyof typeof translations['es']['projectsData']]
-  const metricsData = translations[language].projectsData.metrics
+  const projectsData = translations[language].projectsData
+  const projectData = projectsData[projectBase.id as Exclude<keyof typeof projectsData, 'metrics'>] as any
+  const metricsData = projectsData.metrics
 
   return {
     ...projectBase,

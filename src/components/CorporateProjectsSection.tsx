@@ -1,11 +1,14 @@
-import { corporateProjects } from '../data/projects'
+import { getCorporateProjects } from '../data/projects'
 import { ProjectCard } from './ProjectCard'
 import { Carousel } from './Carousel'
 import { useTranslation } from '../hooks/useTranslation'
+import { useAppContext } from '../context/AppContext'
 import styles from './CorporateProjectsSection.module.css'
 
 export function CorporateProjectsSection() {
   const t = useTranslation()
+  const { language } = useAppContext()
+  const corporateProjects = getCorporateProjects(language)
   const projectItems = corporateProjects.map((project) => (
     <ProjectCard key={project.id} project={project} />
   ))
